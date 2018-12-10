@@ -50,22 +50,22 @@ class SearchBooks extends Component {
 
     return (
       <div>
-        <div className="search-bar">
+        <div className="search">
           <Link
             to="/"
-            className="back-button">
+            className="close-search">
             Back
           </Link>
           <input
             type="text"
-            placeholder="Search by title or author"
+            placeholder="Search a book by title or author..."
             value={query}
             onChange={event => this.updateQuery(event.target.value)}
           >
           </input>
         </div>
 
-        <ul className="books-list">
+        <ul className="list-books">
           {searchError === true && (
             <div className="search-error">
               Your search did not match any books
