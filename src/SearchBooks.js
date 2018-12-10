@@ -68,7 +68,7 @@ class SearchBooks extends Component {
         <ul className="list-books">
           {searchError === true && (
             <div className="search-error">
-              Your search did not match any books
+              No books found. Please try again with some other name.
             </div>
           )}
           {searchError === false && (
