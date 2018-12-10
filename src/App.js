@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI.js'
 
-import BookShelf from './BookShelf'
-import SearchBooks from './SearchBooks'
+import BooksShelf from './BooksShelf'
+import SearchBook from './SearchBook'
 
 import './App.css'
 
@@ -40,13 +40,13 @@ class App extends Component {
           <h4> Keep track of your books anytime, anywhere. </h4>
         </header>
         <Route exact path="/" render={() => (
-          <BookShelf
+          <BooksShelf
             onShelfChange={this.ShelfChange}
             books={this.state.books}
           />
         )} />
         <Route exact path="/search" render={() => (
-          <SearchBooks
+          <SearchBook
             onShelfChange={this.ShelfChange}
             booksOnShelf={this.state.books}
           />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Book from './Book'
 
 
-class BookShelf extends Component {
+class BooksShelf extends Component {
 
   generateShelf = (shelf) => {
     let shelfName = shelf.split(/(?=[A-Z])/).join(" ");
@@ -43,4 +43,4 @@ class BookShelf extends Component {
   }
 }
 
-export default BookShelf;
+export default BooksShelf;

@@ -5,7 +5,7 @@ import * as BooksAPI from './BooksAPI.js'
 import Book from './Book'
 
 
-class SearchBooks extends Component {
+class SearchBook extends Component {
 
   state = {
     query: '',
@@ -44,8 +44,6 @@ class SearchBooks extends Component {
         })
     }
   }
-
-
 
   render() {
     const { query, searchError, books } = this.state
@@ -90,4 +88,4 @@ class SearchBooks extends Component {
   }
 }
 
-export default SearchBooks;
+export default SearchBook;
