@@ -11,7 +11,7 @@ class BookShelf extends Component {
   }
 
   render() {
-    const { books, onChangeShelf } = this.props
+    const { books, onShelfChange } = this.props
     const shelves = ['currentlyReading', 'wantToRead', 'read']
 
     return (
@@ -23,7 +23,7 @@ class BookShelf extends Component {
               {books.filter(book => book.shelf === shelf)
                 .map(book => (
                   <Book
-                    onChangeShelf={onChangeShelf}
+                    onShelfChange={onShelfChange}
                     book={book}
                     shelf={shelf}
                     key={book.id}

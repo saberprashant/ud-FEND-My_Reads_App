@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import BookShelf from './BookShelf'
 import SearchBooks from './SearchBooks'
-import * as BooksAPI from './utils/BooksAPI.js'
+import * as BooksAPI from './BooksAPI.js'
 import './App.css'
 
 class App extends Component {
@@ -38,13 +38,13 @@ class App extends Component {
         </header>
         <Route exact path="/" render={() => (
           <BookShelf
-            onChangeShelf={this.changeShelf}
+            onShelfChange={this.changeShelf}
             books={this.state.books}
           />
         )} />
         <Route path="/search" render={() => (
           <SearchBooks
-            onChangeShelf={this.changeShelf}
+            onShelfChange={this.changeShelf}
             booksOnShelf={this.state.books}
           />
         )} />

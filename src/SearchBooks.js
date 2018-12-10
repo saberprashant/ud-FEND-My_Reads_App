@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Book from './Book'
 import { Link } from 'react-router-dom'
-import * as BooksAPI from './utils/BooksAPI.js'
+import * as BooksAPI from './BooksAPI.js'
 
 class SearchBooks extends Component {
   state = {
@@ -46,7 +46,7 @@ class SearchBooks extends Component {
 
   render() {
     const { query, searchError, books } = this.state
-    const { onChangeShelf } = this.props
+    const { onShelfChange } = this.props
 
     return (
       <div>
@@ -74,7 +74,7 @@ class SearchBooks extends Component {
           {searchError === false && (
             books.map(book => (
               <Book
-                onChangeShelf={onChangeShelf}
+                onShelfChange={onShelfChange}
                 book={book}
                 shelf={book.shelf}
                 key={book.id}
