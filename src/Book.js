@@ -8,8 +8,8 @@ function Book(props) {
 
   return (
     <li className="book-details" key={props.book.id}>
-      <div className="book-image" style={{ backgroundImage: "url(" + props.book.imageLinks.smallThumbnail + ")" }}>
-        <div className="status-selector">
+      <div className="image-of-book" style={{ backgroundImage: "url(" + props.book.imageLinks.smallThumbnail + ")" }}>
+        <div className="change-shelf">
           <select value={props.shelf} onChange={(e) => props.onChangeShelf(props.book, e.target.value)}>
             <option value="disabled" disabled>Move to...</option>
             <option value="currentlyReading">Currently Reading</option>
