@@ -1,24 +1,25 @@
 import React, { Component } from 'react'
-import Book from './Book'
 import { Link } from 'react-router-dom'
+
+import Book from './Book'
+
 
 class BookShelf extends Component {
 
-
-  generateShelfName = (shelf) => {
+  generateShelf = (shelf) => {
     let shelfName = shelf.split(/(?=[A-Z])/).join(" ");
     return shelfName.charAt(0).toUpperCase() + shelfName.slice(1);
   }
 
   render() {
-    const { books, onShelfChange } = this.props
-    const shelves = ['currentlyReading', 'wantToRead', 'read']
+    const { books, onShelfChange } = this.props;
+    const shelves = ['currentlyReading', 'wantToRead', 'read'];
 
     return (
       <div>
         {shelves.map((shelf, index) =>
           <section className="shelf-title" key={index}>
-            <h2>{this.generateShelfName(shelf)}</h2>
+            <h2>{this.generateShelf(shelf)}</h2>
             <ul className="list-books">
               {books.filter(book => book.shelf === shelf)
                 .map(book => (
@@ -42,4 +43,4 @@ class BookShelf extends Component {
   }
 }
 
-export default BookShelf
+export default BookShelf;

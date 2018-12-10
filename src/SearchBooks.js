@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
-import Book from './Book'
 import { Link } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI.js'
 
+import Book from './Book'
+
+
 class SearchBooks extends Component {
+
   state = {
     query: '',
     books: [],
     searchError: false
   }
 
-  updateQuery = query => {
+  queryUpdate = query => {
     this.setState({ query })
     if (!query || (query === '')) {
       this.setState({
@@ -60,7 +63,7 @@ class SearchBooks extends Component {
             type="text"
             placeholder="Search a book by title or author..."
             value={query}
-            onChange={event => this.updateQuery(event.target.value)}
+            onChange={event => this.queryUpdate(event.target.value)}
           >
           </input>
         </div>

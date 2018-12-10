@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Book(props) {
 
   if (!props.book.imageLinks) {
@@ -11,7 +12,7 @@ function Book(props) {
       <div className="image-of-book" style={{ backgroundImage: "url(" + props.book.imageLinks.smallThumbnail + ")" }}>
         <div className="change-shelf">
           <select value={props.shelf} onChange={(e) => props.onShelfChange(props.book, e.target.value)}>
-            <option value="disabled" disabled>Move to...</option>
+            <option value="disabled" disabled>Move it to...</option>
             <option value="currentlyReading">Currently Reading</option>
             <option value="wantToRead">Want to Read</option>
             <option value="read">Read</option>
@@ -25,4 +26,4 @@ function Book(props) {
   )
 }
 
-export default Book
+export default Book;

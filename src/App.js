@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
+import * as BooksAPI from './BooksAPI.js'
+
 import BookShelf from './BookShelf'
 import SearchBooks from './SearchBooks'
-import * as BooksAPI from './BooksAPI.js'
+
 import './App.css'
+
 
 class App extends Component {
   state = {
@@ -19,7 +22,7 @@ class App extends Component {
       })
   }
 
-  changeShelf = (book, shelf) => {
+  ShelfChange = (book, shelf) => {
     BooksAPI.update({ id: book.id }, shelf)
       .then(() => {
         book.shelf = shelf;
@@ -38,13 +41,13 @@ class App extends Component {
         </header>
         <Route exact path="/" render={() => (
           <BookShelf
-            onShelfChange={this.changeShelf}
+            onShelfChange={this.ShelfChange}
             books={this.state.books}
           />
         )} />
-        <Route path="/search" render={() => (
+        <Route exact path="/search" render={() => (
           <SearchBooks
-            onShelfChange={this.changeShelf}
+            onShelfChange={this.ShelfChange}
             booksOnShelf={this.state.books}
           />
         )} />

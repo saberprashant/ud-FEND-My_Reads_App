@@ -24,29 +24,29 @@ p {
 
 .app-title {
   background-color: rgb(0, 183, 255);
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .list-books {
   padding: 0 40px;
   overflow: hidden;
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
   justify-content: space-around;
 }
 
 .book-details {
   list-style-type: none;
-  width: 130px;
   margin: 10px;
+  width: 130px;
 }
 
 .image-of-book {
   box-shadow: 3px 3px 5px #bbb;
+  margin-bottom: 10px;
   width: 128px;
   height: 170px;
-  margin-bottom: 10px;
 }
 
 .change-shelf {
@@ -56,11 +56,11 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgb(0, 183, 255);
   background-image: url('./icons/arrow-drop-down.svg');
+  background-color: rgb(0, 183, 255);
+  background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
-  background-repeat: no-repeat;
   border: none;
   box-shadow: 3px 3px 5px #bbb;
 }
