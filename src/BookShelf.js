@@ -19,7 +19,7 @@ class BookShelf extends Component {
         {shelves.map((shelf, index) =>
           <section className="shelf-title" key={index}>
             <h2>{this.generateShelfName(shelf)}</h2>
-            <ul className="books-list">
+            <ul className="list-books">
               {books.filter(book => book.shelf === shelf)
                 .map(book => (
                   <Book
@@ -34,7 +34,7 @@ class BookShelf extends Component {
         )}
         <Link
           to="/search"
-          className="add-button">
+          className="add-new-book">
           Search
         </Link>
       </div>
