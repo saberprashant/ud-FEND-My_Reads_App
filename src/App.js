@@ -22,10 +22,10 @@ class App extends Component {
   changeShelf = (book, shelf) => {
     BooksAPI.update({ id: book.id }, shelf)
       .then(() => {
-        book.shelf = shelf
+        book.shelf = shelf;
         this.setState(state => ({
           books: state.books.filter(b => b.id !== book.id).concat(book)
-        }))
+        }));
       })
   }
 
