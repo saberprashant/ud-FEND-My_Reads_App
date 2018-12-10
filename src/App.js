@@ -32,8 +32,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="bookshelf-title">
+        <header className="app-title">
           <h1 className="title">My Reads</h1>
+          <h4> Keep track of your books anytime, anywhere. </h4>
         </header>
         <Route exact path="/" render={() => (
           <BookShelf
